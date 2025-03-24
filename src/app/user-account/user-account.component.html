@@ -1,0 +1,16 @@
+<div class="flex h-full gap-3">
+  <div class="grow p-3">
+    <div class="mb-2 font-bold">Current User</div>
+    <div>
+      distrupolpulse\shammelburg
+    </div>
+  </div>
+  <div class="max-w-[300px] w-[300px] border-l crm-border p-3">
+    <div class="mb-2 font-bold">Appearance</div>
+
+    <select class="w-full" [value]="theme()" (change)="setTheme($event)">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+</div>

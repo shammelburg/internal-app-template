@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  height: 100%;
+}
+body {
+  height: 100vh;
+  padding: 0;
+}
+
+.crm-icon {
+  @apply text-[#00a6ce] dark:text-sky-700;
+}
+
+a.link {
+  @apply no-underline text-sky-500 hover:underline dark:text-sky-600;
+}
+
+.bg-distrupol {
+  @apply bg-[#00a6ce] text-white dark:bg-sky-700;
+}
+
+hr {
+  @apply border-gray-300 dark:border-zinc-600;
+}
+
+.crm-border {
+  @apply border-gray-300 dark:border-zinc-600;
+}
+
+/* ENABLES DARK MODE FOR SCROLLBAR */
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  input[type="month"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  select,
+  textarea {
+    @apply rounded-[3px] outline outline-zinc-200 px-2 py-[3px] focus:outline-blue-200 focus:outline-2;
+    @apply dark:bg-zinc-800 dark:placeholder:text-zinc-500 dark:outline-zinc-600 dark:focus:outline-2 dark:focus:outline-blue-600/50 dark:border-none dark:text-zinc-300 disabled:cursor-not-allowed;
+  }
+  select {
+    @apply border-r-8 border-r-transparent dark:border-r-8;
+  }
+}
