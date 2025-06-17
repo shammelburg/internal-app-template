@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { DarkModeService } from '../core/services/dark-mode.service';
+import { PageWrapperComponent } from '../shared/page-wrapper/page-wrapper.component';
 
 @Component({
   selector: 'app-user-account',
   standalone: true,
-  imports: [],
+  imports: [
+    PageWrapperComponent
+  ],
   templateUrl: './user-account.component.html',
   styleUrl: './user-account.component.css',
 })

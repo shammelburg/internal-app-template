@@ -1,0 +1,26 @@
+<div class="flex flex-col h-full">
+  <div class="py-3 px-4 flex justify-between">
+    <div class="mt-[4px] text-xs font-bold">
+      {{ headerText() }}
+    </div>
+    <div class="mt-[4px] text-xs">
+      <a routerLink="/app/my-account"> Sander Hammelburg </a>
+    </div>
+  </div>
+  <div class="grow text-xs h-full">
+    <div
+      class="h-full border-l border-t app-border rounded-ss-[10px] bg-white dark:bg-zinc-500"
+    >
+      <div class="flex flex-col h-full">
+        @if(showNav()){
+        <div class="border-b app-border h-[40px] px-3 flex items-center">
+          <ng-content select=".nav"></ng-content>
+        </div>
+        }
+        <div class="grow h-full">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

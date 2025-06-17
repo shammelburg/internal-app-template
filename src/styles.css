@@ -18,16 +18,16 @@ a.link {
   @apply no-underline text-sky-500 hover:underline dark:text-sky-600;
 }
 
-.bg-distrupol {
+.bg-app {
   @apply bg-[#00a6ce] text-white dark:bg-sky-700;
 }
 
 hr {
-  @apply border-gray-300 dark:border-zinc-600;
+  @apply border-zinc-300 dark:border-zinc-600;
 }
 
-.crm-border {
-  @apply border-gray-300 dark:border-zinc-600;
+.app-border {
+  @apply border-zinc-300 dark:border-zinc-800;
 }
 
 /* ENABLES DARK MODE FOR SCROLLBAR */
@@ -52,4 +52,11 @@ hr {
   select {
     @apply border-r-8 border-r-transparent dark:border-r-8;
   }
+}
+
+button.default {
+  @apply rounded px-2 py-[3px] text-xs text-zinc-600 transition-all border dark:border-transparent bg-zinc-50;
+  @apply active:bg-zinc-300 hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  @apply dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:active:bg-zinc-800;
+  @apply disabled:bg-zinc-700/20 disabled:cursor-not-allowed disabled:dark:bg-zinc-600/40  disabled:border-transparent disabled:text-zinc-50;
 }
