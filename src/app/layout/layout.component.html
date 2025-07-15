@@ -2,7 +2,17 @@
   <div class="h-full flex w-[180px] flex-col">
     <div class="flex grow flex-col overflow-y-auto px-4">
       <div class="flex py-3 justify-center items-center font-bold">
-        <a routerLink="/app"> App Template </a>
+        <img src="https://brandlogos.net/wp-content/uploads/2025/04/angular-logo_brandlogos.net_beb6k.png" alt="">
+
+        <!-- <img
+          [src]="
+            theme() === 'dark'
+              ? 'https://www.thompsonaero.com/wp-content/themes/tas2023/images/tas-logo-white-new.svg'
+              : 'http://www.thompsonaero.com/wp-content/themes/tas2023/images/tas-logo-dark-new.svg'
+          "
+          alt="Logo"
+        /> -->
+        <a routerLink="/app"> </a>
       </div>
       <nav class="flex flex-1 flex-col py-2">
         <ul role="list" class="flex flex-1 flex-col gap-y-1">
@@ -12,7 +22,7 @@
           @for(l of links(); track l.id){
           <li>
             <a
-              [routerLink]="['/app/page-1']"
+              [routerLink]="l.link"
               [routerLinkActive]="
                 'text-zinc-600 bg-zinc-300 dark:text-zinc-300 dark:bg-zinc-700'
               "

@@ -1,14 +1,13 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { Page1Component } from './page-1/page-1.component';
-import { Page2Component } from './page-2/page-2.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/app/page-1',
+    redirectTo: '/app/scanning',
   },
   {
     path: 'app',
@@ -17,15 +16,11 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/app/page-1',
+        redirectTo: '/app/scanning',
       },
       {
-        path: 'page-1',
+        path: 'scanning',
         component: Page1Component,
-      },
-      {
-        path: 'page-2',
-        component: Page2Component,
       },
       {
         path: 'my-account',
@@ -33,5 +28,5 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: '/app/page-1' },
+  { path: '**', redirectTo: '/app/scanning' },
 ];

@@ -8,6 +8,10 @@ html {
 body {
   height: 100vh;
   padding: 0;
+  /* color: #282828; */
+  font-size: 16px;
+  font-family: "Cera", Arial, san_serif;
+  line-height: 1.5;
 }
 
 .crm-icon {
@@ -52,6 +56,15 @@ hr {
   select {
     @apply border-r-8 border-r-transparent dark:border-r-8;
   }
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  @apply outline-red-300 focus:outline-red-400 dark:outline-red-900 dark:focus:outline-red-700;
+}
+input.input-valid {
+  @apply outline-green-300 focus:outline-green-400;
 }
 
 button.default {

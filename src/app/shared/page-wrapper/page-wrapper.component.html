@@ -1,10 +1,10 @@
 <div class="flex flex-col h-full">
-  <div class="py-3 px-4 flex justify-between">
-    <div class="mt-[4px] text-xs font-bold">
+  <div class="h-[40px] flex justify-between items-center mx-4">
+    <div class="text-[14px] font-bold text-sky-900 dark:text-sky-700">
       {{ headerText() }}
     </div>
-    <div class="mt-[4px] text-xs">
-      <a routerLink="/app/my-account"> Sander Hammelburg </a>
+    <div class="text-[14px] font-bold text-sky-900 dark:text-sky-700">
+      <a routerLink="/app/my-account"> {{ common()!.username }}</a>
     </div>
   </div>
   <div class="grow text-xs h-full">

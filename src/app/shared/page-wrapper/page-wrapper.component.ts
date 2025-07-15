@@ -1,5 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
+import { CommonFacadeService } from '../../core/facades/common.facade';
 
 @Component({
   selector: 'app-page-wrapper',
@@ -12,6 +14,9 @@ import { RouterLink } from '@angular/router';
 })
 export class PageWrapperComponent {
 
+  commonFacade = inject(CommonFacadeService);
+
+  common = this.commonFacade.common
 
   headerText = input.required<string>()
   showNav = input<boolean>(false)
