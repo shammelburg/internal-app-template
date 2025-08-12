@@ -13,9 +13,9 @@ import { DarkModeService } from '../core/services/dark-mode.service';
   styleUrl: './layout.component.css',
 })
 export class LayoutComponent {
-    darkModeService = inject(DarkModeService);
+  darkModeService = inject(DarkModeService);
 
-    theme = this.darkModeService.theme;
+  theme = this.darkModeService.theme;
 
-  links = signal<any[]>([{ id: 1, name: 'Scanning', link: ['/app/scanning'] }]);
+  links = signal<any[]>([{ id: 1, name: 'Page 1', link: ['/app/page-1'] }]);
 }

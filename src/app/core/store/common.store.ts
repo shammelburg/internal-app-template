@@ -3,16 +3,12 @@ import { map, distinctUntilChanged } from 'rxjs/operators';
 import { Store } from './store';
 
 export interface CommonState {
-  username: string;
-  destinationFolder: string;
-  sharedFolders: string[];
+  userName: string;
 }
 
 export function defauftCommonState(): CommonState {
   return {
-    username: '',
-    destinationFolder: '',
-    sharedFolders: [],
+    userName: ''
   };
 }
 

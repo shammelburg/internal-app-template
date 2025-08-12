@@ -7,7 +7,7 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/app/scanning',
+    redirectTo: '/app/page-1',
   },
   {
     path: 'app',
@@ -16,10 +16,10 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/app/scanning',
+        redirectTo: '/app/page-1',
       },
       {
-        path: 'scanning',
+        path: 'page-1',
         component: Page1Component,
       },
       {
@@ -28,5 +28,5 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: '/app/scanning' },
+  { path: '**', redirectTo: '/app/page-1' },
 ];

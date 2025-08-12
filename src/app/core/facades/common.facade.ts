@@ -27,7 +27,7 @@ export class CommonFacadeService {
   }
 
   #getCommonState(): boolean {
-    const exists = this.commonStore.getState().username;
+    const exists = this.commonStore.getState().userName;
     return exists ? true : false;
   }
 }
